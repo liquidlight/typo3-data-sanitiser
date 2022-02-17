@@ -1,0 +1,44 @@
+{
+    "name": "liquidlight/data-sanitiser",
+    "description": "Sanitise, minify and randomise data in your database",
+    "type": "typo3-cms-extension",
+    "license": "GPL-2.0+",
+    "homepage": "https://github.com/liquidlight/typo3-data-sanitiser",
+    "readme": "./README.md",
+    "require": {
+        "typo3/cms-core": "^10.4 || ^11.5",
+        "mhuber84/randomizer": "^3.4"
+    },
+    "authors": [
+        {
+            "name": "Liquid Light",
+            "email": "info@liquidlight.co.uk",
+            "homepage": "https://www.liquidlight.co.uk/"
+        },
+        {
+            "name": "Mike Street",
+            "email": "mike@liquidlight.co.uk"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/liquidlight/typo3-data-sanitiser/issues",
+        "source": "https://github.com/liquidlight/typo3-data-sanitiser"
+    },
+    "autoload": {
+		"psr-4": {
+			"LiquidLight\\DataSanitiser\\": "Classes"
+		}
+	},
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "data_sanitiser"
+        }
+    },
+    "scripts": {
+        "prepare-release": [
+            "rm -rf .github",
+            "rm .gitignore",
+            "rm .project.php_cs"
+        ]
+    }
+}
